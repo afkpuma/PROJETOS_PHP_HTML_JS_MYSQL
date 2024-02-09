@@ -15,15 +15,15 @@
     $valor_compra = 255;
 
     $valor_frete = 50;
-    $recebeu_desconto_frete = false;
+    $recebeu_desconto_frete = true;
 
     if ($usuario_possui_cartao_loja  AND $valor_compra >= 100) {
         $valor_frete = 0;
-        $recebeu_desconto_frete = false;
+        $recebeu_desconto_frete = true;
     }
 
     ?>
-
+    
     <h1>Detalhes do pedido</h1>
     <p>Possui cartão da loja?
         <?php
