@@ -26,12 +26,12 @@ foreach ($usuarios_app as $user) {
         $usuario_autenticado = true;
     }
 }
-
+//VERIFICA SE ESTA AUTENTICADO
 if ($usuario_autenticado) {
     echo 'user autenticado';
     $_SESSION['autenticado'] = 'SIM';
+    header('Location: home.php');
 } else {
     $_SESSION['autenticado'] = 'NAO';
     header('Location: index.php?login=erro');
 }
-?>
