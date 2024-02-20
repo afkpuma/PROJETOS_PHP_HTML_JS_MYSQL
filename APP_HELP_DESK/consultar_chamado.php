@@ -1,3 +1,4 @@
+<?php include 'sessao_aut.php'; ?>
 <html>
   <head>
     <meta charset="utf-8" />
