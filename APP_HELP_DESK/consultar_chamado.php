@@ -1,4 +1,27 @@
 <?php require_once 'sessao_aut.php'; ?>
+<?php 
+
+  //chamados
+  $chamados = array();
+  $arquivo = fopen('arquivo.hd', 'r');
+
+  //enquanto houver registros a serem recuperados
+  while(!feof($arquivo)){
+    //linhas  
+    $registro = fgets($arquivo);
+    $chamados[] = $registro;
+  }
+  //fecha arquivo
+  fclose($arquivo); 
+
+  echo '<pre>';
+  print_r($chamados);
+  echo '</pre>';
+
+
+
+
+?>
 <html>
 
 <head>

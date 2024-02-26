@@ -17,6 +17,9 @@ fwrite($arquivo, $texto);
 fclose($arquivo);
 
 echo str_replace('#', '-', $texto);
+
+//direcionar a page para onde vao os chamados
+header('Location: abrir_chamado.php')
 ?>
 
 
