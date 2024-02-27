@@ -1,22 +1,20 @@
 <?php require_once 'sessao_aut.php'; ?>
-<?php 
+<?php
 
-  //chamados
-  $chamados = array();
-  $arquivo = fopen('arquivo.hd', 'r');
+//chamados
+$chamados = array();
+$arquivo = fopen('arquivo.hd', 'r');
 
-  //enquanto houver registros a serem recuperados
-  while(!feof($arquivo)){
-    //linhas  
-    $registro = fgets($arquivo);
-    $chamados[] = $registro;
-  }
-  //fecha arquivo
-  fclose($arquivo); 
+//enquanto houver registros a serem recuperados
+while (!feof($arquivo)) {
+  //linhas  
+  $registro = fgets($arquivo);
+  $chamados[] = $registro;
+}
+//fecha arquivo
+fclose($arquivo);
 
-  echo '<pre>';
-  print_r($chamados);
-  echo '</pre>';
+
 
 
 
@@ -64,23 +62,19 @@
 
           <div class="card-body">
 
-            <div class="card mb-3 bg-light">
-              <div class="card-body">
-                <h5 class="card-title">Título do chamado...</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
-                <p class="card-text">Descrição do chamado...</p>
+            <? foreach ($chamados as $chamado) { ?>
+             <? $chamado;?>
+              <div class="card mb-3 bg-light">
+                <div class="card-body">
+                  <h5 class="card-title">Título do chamado...</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
+                  <p class="card-text">Descrição do chamado...</p>
 
+                </div>
               </div>
-            </div>
+            <? } ?>
 
-            <div class="card mb-3 bg-light">
-              <div class="card-body">
-                <h5 class="card-title">Título do chamado...</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
-                <p class="card-text">Descrição do chamado...</p>
 
-              </div>
-            </div>
 
             <div class="row mt-5">
               <div class="col-6">
